@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import { mapState, mapGetters, mapActions } from "vuex";
 export default {
     props: {
         tabs: {
@@ -34,8 +35,26 @@ export default {
             currentTab: this.defaultTab,
         };
     },
+
+      computed: {
+    ...mapState(["switchLoanTab"]),
+  },
+
+   watch: {
+    switchLoanTab: {
+      handler(value) {
+        if (!value) return;
+
+    console.log('value',value)
+        this.currentTab='loan-applied'
+      },
+      immediate: true,
+      deep: true, // Ensure that changes 
+    },
+},
     methods: {
         selectTab(tabName) {
+            this.$store.commit('setchangeCurrentTab','')
             this.currentTab = tabName;
         },
     },

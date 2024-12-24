@@ -70,17 +70,19 @@ export default {
     },
     methods: {
         ...mapActions(["loggedInUser"]),
+
+        
       async login() {
     this.loginError = '';
     this.loading = true;
 
     try {
-        // Simulate a login request (replace with a real API call in production)
+        
         await new Promise(resolve => setTimeout(resolve, 2000)); // Delay for 2 seconds
 
         // Retrieve all registered users from localStorage
         const allSavedUsers = JSON.parse(localStorage.getItem("user-registerUserInfo")) || [];
-        console.log('allSavedUsers', allSavedUsers);
+      
 
         // Find the user based on the telephone entered by the user
         const matchedUser = allSavedUsers.find(user => user.telephone === this.telephone);
@@ -92,7 +94,7 @@ export default {
 
         // Check if the password matches
         if (matchedUser.password === this.password) {
-            // Set logged-in user info in localStorage (if required)
+           
             localStorage.setItem("userLoggedIn", JSON.stringify(matchedUser));
 
             // Redirect based on user role

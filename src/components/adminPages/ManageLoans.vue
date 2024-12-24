@@ -2,7 +2,17 @@
     <div class="admin-management-container flex flex-col items-center bg-gray-50 min-h-screen py-10 px-5">
         <div class="text-center mb-8">
             <h1 class="text-2xl font-bold text-gray-800">Admin Loan Management</h1>
-            <p class="text-sm text-gray-600 mt-2">Manage and review all loan applications effortlessly</p>
+          
+
+            <div class="flex justify-between items-center my-3">
+         <p class="text-sm text-gray-600 ">Manage and review all loan applications effortlessly</p>
+        <button
+          @click="logout"
+          class=" bg-gray-500 px-4 mx-3 text-white text-sm rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 transition duration-300 disabled:bg-blue-300"
+        >
+          Logout
+        </button>
+      </div>
         </div>
 
         <!-- adminTabs with Pending Badge -->
@@ -89,6 +99,16 @@ export default {
         setTab(tab) {
             this.setCurrentTab(tab);
         },
+         logout() {
+      // Clear user data from localStorage
+      localStorage.removeItem("userLoggedIn");
+
+      // Reset Vuex user state
+      this.$store.commit("setUser", null);
+
+      // Redirect to the login page
+      this.$router.push("/login");
+    },
         // Change the name of the method to avoid recursion
         handleChangeLoanStatus(loanId, status) {
             // Call the action instead of recursively calling this method

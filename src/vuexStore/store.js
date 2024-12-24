@@ -17,6 +17,7 @@ export default Vuex.createStore({
         appliedLoans: null, 
         loading: false,
         user: JSON.parse(localStorage.getItem("userLoggedIn")) || null,
+        switchLoanTab:'',
     },
     getters: {
         filteredLoans(state) {
@@ -41,6 +42,11 @@ export default Vuex.createStore({
         setCurrentTab(state, tab) {
             state.currentTab = tab;
         },
+        setchangeCurrentTab(state, tab) {
+
+            
+            state.switchLoanTab = tab;
+        },
         setUser(state, user) {
             state.user = user;
         },
@@ -62,8 +68,8 @@ export default Vuex.createStore({
         },
         async logout({ commit }) {
             // Clear the user on logout
-            // localStorage.removeItem("userLoggedIn");
-            // commit("setUser", null);
+            localStorage.removeItem("userLoggedIn");
+            commit("setUser", null);
         },
         async fetchLoans({ commit }) {
             commit("setLoading", true);
