@@ -57,7 +57,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+
 import { mapState, mapGetters, mapActions } from "vuex";
 export default {
     data() {
