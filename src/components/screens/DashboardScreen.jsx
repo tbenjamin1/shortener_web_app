@@ -25,7 +25,7 @@ import {
 import DashboardIntro from "./DashboardHome";
 import DashboardAnalytics from "./DashboardAnalytics";
 // import DashboardSettings from "./DashboardSettings";
-import Mylinks from "./Mylinks";
+// import Mylinks from "./Mylinks";
 import { useDispatch, useSelector } from "react-redux";
 import {
   getLoggedInUser,
@@ -59,12 +59,12 @@ const DashboardScreen = () => {
       case "dashboard":
         return <DashboardIntro />;
       case "links":
-        return <Mylinks />;
+        return <div>settings</div>;
 
       case "settings":
         return <div>settings</div>
       default:
-        return <Mylinks />;
+        return <div>settings</div>;
     }
   };
 
