@@ -29,7 +29,7 @@ import {
 import { Pagination } from "antd";
 import DashboardIntro from "./DashboardHome";
 import DashboardAnalytics from "./DashboardAnalytics";
-import DashboardSettings from "./dashboardSettings";
+import DashboardSettings from "./Settings";
 import { useDispatch, useSelector } from "react-redux";
 import {
   fetchShortenedUrls,
