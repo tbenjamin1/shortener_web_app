@@ -7,13 +7,17 @@ import {
   useLocation,
 } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { ToastProvider } from "react-toast-notifications";
+
 import LandingPageScreen from "./components/screens/LandingPageScreen";
 import LoginPagescreen from "./components/screens/LoginScreen";
 import RegisterPage from "./components/screens/Register";
 import DashboardScreen from "./components/screens/DashboardScreen";
-import { getLoadingState, getLoggedInUser } from "./redux/ShortenUrls/ShortenUlrsSlice";
+import {
+  getLoadingState,
+  getLoggedInUser,
+} from "./redux/ShortenUrls/ShortenUlrsSlice";
 import { useMemo } from "react";
+import { ToastContainer } from "react-toastify";
 
 // Public Routes - Accessible to All Users
 const PUBLIC_ROUTES = [
@@ -40,8 +44,6 @@ const ProtectedRoute = ({ element }) => {
 
 function App() {
   const user = useSelector(getLoggedInUser);
-
-  // Memoizing routes for optimization
   const publicRoutes = useMemo(
     () =>
       PUBLIC_ROUTES.map((route) => (
@@ -51,25 +53,19 @@ function App() {
   );
 
   return (
-    <ToastProvider autoDismiss placement="top-right">
-      <Router>
-        <div className="justify-center">
-          <Routes>
-            {/* Public Routes */}
-            {publicRoutes}
-
-            {/* Protected Dashboard Route */}
-            <Route
-              path="/dashboard"
-              element={<ProtectedRoute element={<DashboardScreen />} />}
-            />
-
-            {/* Catch-all route */}
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
-        </div>
-      </Router>
-    </ToastProvider>
+    <Router>
+      <div className="justify-center">
+        <ToastContainer />
+        <Routes>
+          {publicRoutes}
+          <Route
+            path="/dashboard"
+            element={<ProtectedRoute element={<DashboardScreen />} />}
+          />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
