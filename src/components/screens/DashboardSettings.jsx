@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { getLoggedInUser } from "../../redux/ShortenUrls/ShortenUlrsSlice";
 import { Loader, User, Mail, Key } from "lucide-react";
 
-const DashboardSettings = () => {
+const UserSettings = () => {
   const loggedInUser = useSelector(getLoggedInUser);
   const [isEditing, setIsEditing] = useState(false);
   const [formData, setFormData] = useState({
@@ -191,4 +191,4 @@ const DashboardSettings = () => {
   );
 };
 
-export default DashboardSettings;
+export default UserSettings;

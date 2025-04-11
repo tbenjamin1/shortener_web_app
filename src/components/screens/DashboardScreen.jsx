@@ -24,14 +24,15 @@ import {
 } from "lucide-react";
 import DashboardIntro from "./DashboardHome";
 import DashboardAnalytics from "./DashboardAnalytics";
-// import DashboardSettings from "./DashboardSettings";
-// import Mylinks from "./Mylinks";
+
 import { useDispatch, useSelector } from "react-redux";
 import {
   getLoggedInUser,
   logoutUser,
 } from "../../redux/ShortenUrls/ShortenUlrsSlice";
 import axios from "axios";
+import UserSettings from "./dashboardSettings";
+import UserLinks from "./Mylinks";
 
 const DashboardScreen = () => {
   const loggedInUser = useSelector(getLoggedInUser);
@@ -59,12 +60,12 @@ const DashboardScreen = () => {
       case "dashboard":
         return <DashboardIntro />;
       case "links":
-        return <div>settings</div>;
+        return <UserLinks /> ;
 
       case "settings":
-        return <div>settings</div>
+        return <UserSettings />;
       default:
-        return <div>settings</div>;
+        return <UserLinks /> ;
     }
   };
 
