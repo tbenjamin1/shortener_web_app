@@ -556,7 +556,7 @@ const UserLinks = () => {
                         ))}
                     </div>
                   </th>
-                  <th
+                  {/* <th
                     scope="col"
                     className="py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer"
                     onClick={() => handleSort("lastClicked")}
@@ -570,7 +570,7 @@ const UserLinks = () => {
                           <ChevronDown size={16} />
                         ))}
                     </div>
-                  </th>
+                  </th> */}
                   <th scope="col" className="relative px-6 py-3">
                     <span className="sr-only">Actions</span>
                   </th>
@@ -591,7 +591,7 @@ const UserLinks = () => {
                           className="w-full p-1 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                       ) : (
-                        <div className="max-w-xs truncate">
+                        <div className="max-w-xs overflow-hidden whitespace-nowrap text-ellipsis">
                           <a
                             href={link.longUrl}
                             target="_blank"
@@ -633,12 +633,12 @@ const UserLinks = () => {
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                       {link.clicks.toLocaleString()}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      {/* {link.lastClicked
+                    {/* <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      {link.lastClicked
                         ? formatDate(link.lastClicked)
-                        : "Never"} */}
+                        : "Never"}
                       N/A
-                    </td>
+                    </td> */}
                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                       <button
                         onClick={() => viewUrlAnalytics(link.shortCode)}
