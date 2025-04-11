@@ -31,8 +31,8 @@ import {
   logoutUser,
 } from "../../redux/ShortenUrls/ShortenUlrsSlice";
 import axios from "axios";
-import UserSettings from "./dashboardSettings";
-import UserLinks from "./Mylinks";
+import UserSettings from "./Settings";
+import UserLinks from "./links";
 
 const DashboardScreen = () => {
   const loggedInUser = useSelector(getLoggedInUser);
