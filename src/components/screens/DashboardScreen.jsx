@@ -24,7 +24,7 @@ import {
 } from "lucide-react";
 import DashboardIntro from "./DashboardHome";
 import DashboardAnalytics from "./DashboardAnalytics";
-import DashboardSettings from "./dashboardSettings";
+import DashboardSettings from "./DashboardSettings";
 import Mylinks from "./Mylinks";
 import { useDispatch, useSelector } from "react-redux";
 import {

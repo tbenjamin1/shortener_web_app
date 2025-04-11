@@ -49,7 +49,7 @@ const DashboardSettings = () => {
       <h2 className="text-xl font-medium text-gray-900 mb-4">My Profile</h2>
       <p className="text-gray-600 mb-6">
         Update your profile settings here. You can change your password, email
-        address, and other personal information.
+        address, and other personal information
       </p>
 
       <div className="mb-8 bg-gray-50 p-4 rounded-lg">
