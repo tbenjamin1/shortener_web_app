@@ -1,8 +1,42 @@
-# Getting Started with Create React App
+# URL Shortener Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
+A modern URL shortening service with analytics, inspired by Bitly. This project provides a full-featured platform for creating and managing shortened URLs with detailed usage statistics.
 
-Firstly run npm install --force in the root project
+
+## Tech Stack
+
+
+- **Frontend**: React.js with TailwindCSS
+- **State Management**: React Query for efficient API data fetching and caching
+- **Authentication**: JWT-based authentication system
+- **Styling**: TailwindCSS for responsive design
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14+ recommended)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+   ```
+   git clone https://github.com/tbenjamin1/shortener_web_app
+   cd url-shortener
+   ```
+
+2. Install dependencies
+   ```
+   npm install 
+   ```
+
+3. Start the development server
+   ```
+   npm start
+   ```
+   
+4. Open [http://localhost:5175](http://localhost:5175) to view the application in your browser
 
 ## Available Scripts
 
@@ -10,65 +44,64 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Runs the app in development mode. The page will reload when you make changes, and you may see lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in interactive watch mode.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Builds the app for production to the `build` folder. The build is optimized for best performance with minified files and hashed filenames.
 
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If you need full control over the build configuration, you can eject at any time.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Project Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+src/
+├── components/         
+├── screens/            
+├── redux/           
+├── hooks/              
+├── context/           
+├── utils/             
+└── styles/             
+```
 
-## Learn More
+## Key Pages
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Landing Page**: A Bitly-inspired landing page showcasing the service's features
+2. **Login & Register**: User authentication pages with form validation
+3. **Dashboard**: Central hub for managing all shortened URLs
+4. **URL Shortener**: Interface for creating new shortened URLs
+5. **Analytics**: Detailed statistics for URL usage and clicks
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## API Integration
 
-### Code Splitting
+- JWT authentication for secure API requests
+- Comprehensive error handling for API failures
+- Real-time data updates using React Query
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Deployment
 
-### Analyzing the Bundle Size
+Follow these steps to deploy the application:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Build the production-ready version
+   ```
+   npm run build
+   ```
 
-### Making a Progressive Web App
+2. Deploy the contents of the `build` folder to your hosting provider of choice
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contributing
 
-### Advanced Configuration
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## License
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
+This project is licensed under the MIT License - see the LICENSE file for details.
