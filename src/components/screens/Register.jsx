@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import { Loader, ArrowRight, Copy, Check, AlertCircle, X } from 'lucide-react';
+
 const apiBaseUrl = import.meta.env.VITE_APP_API_URL;
 const RegisterPage = ({ closeToast, toastProps }) => {
  

@@ -40,7 +40,7 @@ import {
 import axios from "axios";
 import LoadingSpiner from "./CreateLinkForm";
 
-const Mylinks = () => {
+const UserLinks = () => {
   const baseUrl = import.meta.env.VITE_APP_API_URL;
   const apiBaseUrl = import.meta.env.VITE_APP_API_URL;
 
@@ -715,4 +715,4 @@ const Mylinks = () => {
   );
 };
 
-export default Mylinks;
+export default UserLinks;
