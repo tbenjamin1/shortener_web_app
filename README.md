@@ -66,11 +66,7 @@ If you need full control over the build configuration, you can eject at any time
 src/
 ├── components/         
 ├── screens/            
-├── redux/           
-├── hooks/              
-├── context/           
-├── utils/             
-└── styles/             
+├── redux/                  
 ```
 
 ## Key Pages
