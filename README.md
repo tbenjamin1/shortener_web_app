@@ -1,63 +1,74 @@
-# Loan Management System
+# Getting Started with Create React App
 
-## Vue 3 + Vite
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 
-This project is built with Vue 3 and Vite, using Vue 3 `<script setup>` SFCs. For more details, check out the [Vue script setup documentation](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup).
+Firstly run npm install --force in the root project
 
-### Recommended IDE Setup
+## Available Scripts
 
-- [VS Code](https://code.visualstudio.com/)
-- [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+In the project directory, you can run:
 
----
+### `npm start`
 
-## Overview
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The Loan Management System is a web-based application designed to streamline loan management. Users can view their loan applications, submit new ones, and admins have the ability to approve or decline applications.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-### Features
+### `npm test`
 
-- **Applied Loans:** View a list of submitted loan applications.
-- **Apply for a Loan:** Submit new loan applications with user-friendly forms.
-- **Loan Status Management:** Admins can review, approve, or decline loan applications.
-- **Tab-Based Navigation:** Easily navigate between sections with intuitive tabs.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
----
+### `npm run build`
 
-## Tech Stack
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-- **Frontend:** Vue.js
-- **State Management:** Vuex
-- **HTTP Client:** Axios
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
----
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Folder Structure
+### `npm run eject`
 
-- **`src/components`**: Contains reusable components.
-- **`src/views`**: Page-specific components like `LoanApplication.vue`.
-- **`src/store`**: Vuex store for state management.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
----
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## Quick Start
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-Follow these steps to set up the project locally:
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-```bash
-# Clone the repository
-git clone <repository-url>
+## Learn More
 
-# Navigate to the project directory
-cd loan-management-system
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-# Install dependencies
-npm install
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-# Start the development server
-npm run serve
+### Code Splitting
 
-# Or using Yarn
-yarn run dev
-# unit testing 
-npm run test # loan_management
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
