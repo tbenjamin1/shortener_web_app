@@ -68,7 +68,6 @@ const LoginPagescreen = () => {
           },
         });
   
-        console.log("Login successful:", data);
         // Store token if needed
         localStorage.setItem('loggedinUser', JSON.stringify(data));
         window.location.replace("/dashboard");
